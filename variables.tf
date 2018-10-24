@@ -1,8 +1,6 @@
 ##### SoftLayer/IBMCloud Access Credentials ######
 
 # Provide values for these in terraform.tfvars
-variable "sl_username" { description = "IBM Cloud (aka SoftLayer) user name." }
-variable "sl_api_key" { description = "IBM Cloud (aka SoftLayer) API key." }
 
 variable "key_name" {
   description = "Name or reference of SSH key to provision IBM Cloud instances with"
@@ -19,7 +17,7 @@ variable "private_vlan_router_hostname" {
 }
 
 variable "private_vlan_number" {
-   default = -1
+   default = "-1"
    description = "Private VLAN number to place all VMs on.  e.g. 1211. See Network > IP Management > VLANs in the portal. Leave blank to let the system choose."
 }
 
@@ -29,7 +27,7 @@ variable "public_vlan_router_hostname" {
 }
 
 variable "public_vlan_number" {
-   default = -1
+   default = "-1"
    description = "Public VLAN number to place all VMs on.  e.g. 1171. See Network > IP Management > VLANs in the portal. Leave blank to let the system choose."
 }
 
